@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnlog;
     EditText user, pass;
-
+    String usuario, password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         user = findViewById(R.id.TV_usu);
         pass = findViewById(R.id.TV_pas);
 
+        usuario = user.getText().toString();
+        password = pass.getText().toString();
 
         btnlog.setOnClickListener(new View.OnClickListener() {
             @Override

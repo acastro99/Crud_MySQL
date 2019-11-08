@@ -32,6 +32,7 @@ public class Inicio extends AppCompatActivity {
     boolean inputEd=false;
     boolean input1=false;
     int resultadoInsert=0;
+    final Context context = this;
 
     String senal = "";
     String codigo = "";
@@ -301,18 +302,34 @@ public class Inicio extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_limpiar) {
-            et_codigo.setText(null);
-            et_descripcion.setText(null);
-            et_precio.setText(null);
-            return true;
-        }else if(id == R.id.action_listaArticulos){
+         if(id == R.id.action_listaArticulos){
             Intent spinnerActivity = new Intent(Inicio.this, Consulta_RecyclerView.class);
             startActivity(spinnerActivity);
             return true;
         }else if(id == R.id.action_salir){
             DialogConfirmacion();
             return true;
+        }
+
+         if (id == R.id.action_Acercade){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                    context);
+            // Establecer el título
+            alertDialogBuilder.setTitle("Proyecto creado por:");
+            // Establecer mensaje de diálogo
+            alertDialogBuilder
+                    .setMessage("Simón Castro \nSIS 21B")
+                    .setCancelable(false)
+                    .setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // Si presiona que Aceptar se cerrara el mensaje de dialogo
+                            dialog.cancel();
+                        }
+                    });
+            // Crear mensaje AlertDialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            // Mostrar alert
+            alertDialog.show();
         }
 
         return super.onOptionsItemSelected(item);

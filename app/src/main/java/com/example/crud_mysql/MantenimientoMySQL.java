@@ -292,7 +292,7 @@ public class MantenimientoMySQL {
                                 String precio = jsonArray.getJSONObject(0).getString("precio");
 
 
-                                Intent intent = new Intent(context, MainActivity.class);
+                                Intent intent = new Intent(context, Inicio.class);
                                 intent.putExtra("senal", "1");
                                 intent.putExtra("codigo", codigo.toString());
                                 intent.putExtra("descripcion", descripcion);
@@ -364,7 +364,7 @@ public class MantenimientoMySQL {
                                datos.setDescripcion(descripcion);
                                datos.setPrecio(Double.parseDouble(precio));
 
-                                Intent intent = new Intent(context, MainActivity.class);
+                                Intent intent = new Intent(context, Inicio.class);
                                 intent.putExtra("senal", "1");
                                 intent.putExtra("codigo", codigo.toString());
                                 intent.putExtra("descripcion", descripcion);

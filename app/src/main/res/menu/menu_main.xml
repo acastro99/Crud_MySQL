@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_limpiar"
-        android:orderInCategory="1"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_Acercade"
+        android:orderInCategory="4"
+        android:title="Acerca de" />
 
     <item
         android:id="@+id/action_listaArticulos"
