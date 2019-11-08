@@ -17,6 +17,7 @@
 
 
     <EditText
+        android:id="@+id/TV_usu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -28,6 +29,7 @@
         />
 
     <EditText
+        android:id="@+id/TV_pas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -40,6 +42,7 @@
 
 
     <Button
+        android:id="@+id/Btn_iniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
